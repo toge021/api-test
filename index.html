@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Uploader</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div class="container">
+        <h1>📤 Uploader</h1>
+        <p class="sub">Glisse une image ou clique pour choisir</p>
+
+        <!-- Zone de drop -->
+        <div class="drop-zone" id="dropZone">
+            <div class="drop-content">
+                <span class="icon">📁</span>
+                <p>Dépose ton image ici</p>
+                <span class="hint">ou clique pour parcourir</span>
+            </div>
+            <input type="file" id="fileInput" accept="image/*" multiple />
+        </div>
+
+        <!-- Barre de progression -->
+        <div class="progress-wrapper hidden" id="progressWrapper">
+            <div class="progress-bar" id="progressBar"></div>
+            <span class="progress-text" id="progressText">0%</span>
+        </div>
+
+        <!-- Résultats -->
+        <div class="results" id="results"></div>
+
+        <!-- Historique -->
+        <div class="history" id="history">
+            <h3>📋 Historique</h3>
+            <ul id="historyList"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
